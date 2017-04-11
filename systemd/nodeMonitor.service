@@ -1,0 +1,14 @@
+[Unit]
+Description=Node JS Monitoring Service
+
+[Service]
+ExecStart=/bin/node <path_of_your_nodeMonitor.js>
+Restart=always
+User=root
+Group=root
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/tmp
+
+[Install]
+WantedBy=multi-user.target
